@@ -1,0 +1,184 @@
+#Pandas is the most popular python library that is used for data analysis. 
+#It provides highly optimized performance with back-end source code is purely written in C or Python.
+#
+#We can analyze data in pandas with:
+#
+#Series
+#DataFrames
+#Series:
+#Series is one dimensional(1-D) array defined in pandas that can be used to store any data type.
+
+#Series
+
+# Program to create series 
+#import pandas as pd  # Import Panda Library 
+  
+# Create series with Data, and Index 
+#a = pd.Series(Data, index = Index)   
+
+#import pandas as pd
+#
+##creating series using list
+#
+#ser=pd.Series([11,12,13,14])
+#print(ser)
+
+
+#import pandas as pd
+
+#p1=[10,20,30,40]
+#
+#s1=pd.Series(p1)
+#
+#print("Creating Series is:\n",s1)
+#
+#ind=['a','b','c','d']
+#
+#s2=pd.Series(p1,ind)
+#
+#print(s2)
+
+
+#dic={'a':10,'b':20,'c':30}
+#
+#d1=pd.Series(dic)
+#
+#print(d1)
+#
+#ind1=['a1','b1','c1','d1']
+#
+#d2=pd.Series(d1,ind1)
+#
+#print(d2)
+
+#
+#j1=[[1,2,3],[4,5,6]]
+#
+#f1=pd.Series(j1)
+#
+#print(f1)
+
+#1.The rows can have labels 2.series is applicable to non-numeric data types as well
+#labels=['a','b','c']
+#my_data=[10,20,30]
+#
+#c1=pd.Series(my_data,labels)
+#
+#print(c1)
+
+#print(pd.Series(data=my_data,index=labels))
+
+
+#ser1=pd.Series([1,2,3,4],['A','B','C','D'])
+#
+#print(ser1)
+#
+#ser2=pd.Series([5,6,7,8],['A','B','A','B'])
+#
+#print(ser2)
+#
+#print(ser1+ser2)
+#
+#print(ser1.index[0])
+#
+##print(ser1.index[4])#out of bounds for axis
+#
+#print(ser1==1)
+#======================================================================
+#DataFrames:
+#DataFrames is two-dimensional(2-D) data structure defined in pandas
+#which consists of rows and columns.
+
+#import pandas as pd
+
+#p1=pd.DataFrame(Data)
+#
+#print(p1)
+
+#dic1={'r1':1,'r2':2,'r3':3}
+#dic2={'r1':1,'r2':2,'r3':4}
+#
+#Data={'c1':dic1,'c2':dic2}
+#
+#print(pd.DataFrame(Data))
+#p1=pd.Series([1,2,3,4,5,6])
+#p2=pd.Series([10,20,30,0])
+#p3=pd.Series([2,3,'G','M',6,'S',8])
+#Data={'c1':p1,'c2':p2,'c3':p3}
+#print(pd.DataFrame(Data))
+
+
+#a1=[[1,2,3],[4,5,6]]
+#a2=[[1,2,3],[4,5,6]]
+#data1={'c1':a1,'c2':a2}
+#print(pd.DataFrame(data1))
+
+import pandas  as pd
+import numpy as np
+
+df_test=pd.DataFrame(np.random.rand(5,4),['A','B','C','D','E'],['W','X','Y','Z'])
+print(df_test)
+
+#df_test1=pd.DataFrame(np.random.rand(2,2),['r1','r2'],['c1','c2'])
+#print(df_test1)
+#
+#
+#df_test2=pd.DataFrame(data=np.random.rand(5,4),columns=['W','X','Y','Z'])
+#print(df_test2)
+
+#print(df_test[['W','X']])
+
+#print(df_test.loc['A'])
+#
+#print(df_test.loc[['A'],['W']])
+#
+#print(df_test.loc[['A','B'],['W','X']])
+#print(df_test.iloc[[1],[2]])
+
+
+#df_test['NEWCOL']=df_test['W']+df_test['X']
+##print(df_test)
+#
+#
+#
+##df_test.drop('NEWCOL',axis=1)
+#df_test.drop('NEWCOL',axis=1,inplace=False)
+#print(df_test)
+
+
+#print(df_test.shape)
+#
+#print(df_test['W']<0)
+#
+#print(df_test[(df_test['W'] < 0.4) & (df_test['Y']> 0.3)])
+
+#print(pwd)
+
+#Read a file using pandas
+
+test_df=pd.read_excel('OnlineExample.xlsx',sheetname="LIVEWIRE")
+print(test_df.head())
+print(test_df)
+
+
+df_test.to_excel("test1.xlsx",sheet_name="MySheet")
+print(df_test)
+
+df_test.to_csv("test2.csv")
+print(df_test)
+
+test_missing=pd.read_csv("test_missing.csv")
+print(test_missing)
+
+test_missing=pd.read_csv("test3.csv")
+print(test_missing)
+
+print(test_missing.isnull())
+
+print(test_missing.describe())
+
+print(test_missing.isnull().sum())
+
+
+print(test_missing.dropna(axis=0))
+print(test_missing.dropna(axis=1))
