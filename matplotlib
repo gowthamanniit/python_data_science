@@ -1,0 +1,196 @@
+#https://matplotlib.org/tutorials/index.html
+import matplotlib.pyplot as plt
+
+
+#my_list=[10,20,30,40]
+#plt.xlabel("x-axis")
+#plt.ylabel("y-axis")
+#plt.plot(my_list)
+#plt.show()
+
+#plt.plot([1,2,3,4])
+#plt.plot([10,20,30,40])
+#plt.plot([1,2,3,4,5],[10,20,30,40,50])
+
+#a = [1,2,3,4]
+#b = [i**4 for i in a]
+##plt.plot(x,y)
+#plt.plot(a,b)
+#plt.show()
+
+#plt.show()
+#a=[1,2,3,4]
+#b = [i**4 for i in a]
+#print(b)
+#x=[1000,2000,3000,4000]
+##y=["DMK","ADMK","XCY","BJP"]
+#
+#y=[i**19 for i in x]
+#
+#plt.plot(x,y)
+#plt.ylabel("y-axis")
+#plt.xlabel("x-axis")
+#plt.show()
+# Multiline plots using multiple calls to plt.plot()
+# or compare the plots
+#x = [1,2,3,4,5]
+#x=['BJP','ADMK','DMK','XYZ','ZYX']
+#y=[100,200,300,400,500]
+#plt.plot(x,y)
+#plt.plot([elem**2 for elem in y])
+#plt.plot([elem**3 for elem in y])
+#s1=[x,[elem**4 for elem in y]]
+#s2=[x,[elem**3 for elem in y]]
+#print("Orange",s1)
+#print("Green",s2)s
+#plt.ylabel("y-axis")
+#plt.xlabel("x-axis")
+#plt.show()
+
+
+# Multiline plots using single call to plt.plot()
+# or compare the plots
+#x = [1,2,3,4]
+##plt.plot(x,x,
+#      #   x, [elem**2 for elem in x],
+#        #x, [elem**3 for elem in x],'ro')
+#plt.ylabel("y-axis")
+#plt.xlabel("x-axis")
+##plt.axis([0,2.5,0,20])
+##plt.xlim(0,2)
+##plt.ylim(0,10)
+#plt.grid(True)
+#plt.show()
+
+#plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro')
+#plt.ylabel("y-axis")
+#plt.xlabel("x-axis")
+#plt.axis([0, 6, 0, 20])
+#plt.show()
+#
+#import numpy as np
+#
+## evenly sampled time at 200ms intervals
+#t = np.arange(0., 5., 0.2)
+#t=np.arange(0.,5.,0.3)
+#print(t)
+# #red dashes, blue squares and green triangles
+#plt.plot(t, t, 'r--', t, t**2, 'bs', t, t**3, 'g^')
+#plt.show()
+
+
+
+
+#adding a title for the graph
+
+
+
+
+import matplotlib.pyplot as plt
+#x = [1, 2, 3, 4]
+#plt.plot(x, [elem for elem in x],
+#         x, [elem**2 for elem in x],
+#         x, [elem**3 for elem in x])
+#plt.grid(True)  # add the grid
+#plt.xlabel('X-axis')
+#plt.ylabel('Y-axis')
+#plt.title('My Plot')
+#plt.show()
+
+#adding a Legend
+#giving name to each plot
+
+#import matplotlib.pyplot as plt
+#x = [1, 2, 3, 4]
+#plt.plot(x, [elem for elem in x], label='linear')
+#plt.plot(x, [elem**2 for elem in x], label='square')
+#plt.plot(x, [elem**3 for elem in x], label='cube')
+#plt.grid(True)  # add the grid
+#plt.xlabel('X-axis')
+#plt.ylabel('Y-axis')
+#plt.legend()  # assign labels to the plot
+#plt.savefig('myplot.png')
+#plt.show()
+
+
+#Histogram
+#import matplotlib.pyplot as plt
+#import numpy as np
+#data = np.random.randn(10,10)
+#print(data)
+#plt.hist(data)
+#plt.show()
+
+#BarChart
+
+#import matplotlib.pyplot as plt
+#plt.bar([1, 2, 3,4], [1, 4, 9,10])
+#plt.show()
+
+
+
+#plot a dictionary using Bar chart
+#my_dict = {'A':30, 'B':65, 'C': 50, 'D': 80,'E':90}
+#for i, key in enumerate(my_dict):
+#    plt.bar(i, my_dict[key])
+#    plt.legend("MySample")
+#plt.show()
+
+
+# giving name to each bar
+#my_dict = {'A':20, 'B':65, 'C': 50, 'D': 80,'E':100}
+#for i, key in enumerate(my_dict):
+#    plt.bar(i, my_dict[key])
+#
+#plt.xticks([0, 1, 2, 3,4],  my_dict.keys())
+#plt.yticks([20,65,50,80,100],my_dict.values())
+#plt.xlabel("x-axis")
+#plt.ylabel("y-axis")
+#plt.show()
+
+
+#Pie chart
+#used to compare the multiple parts against the whole
+
+
+#import matplotlib.pyplot as plt
+#plt.figure(figsize=(5,5)) # size of the plot
+#x = [600000, 200000, 300000, 70000, 30000] # proportion of sectors
+#my_labels = ['DMK', 'Cars', 'Super-cars', 'bicyle', 'planes']
+##plt.pie(x, labels=my_labels)
+#plt.pie(x,labels=my_labels)
+#plt.show()
+
+#show percentage in pie-plot
+#using the parameter 'autopct'
+
+#import matplotlib.pyplot as plt
+#
+#names = ['aa', 'bb', 'cc', 'dd']
+#
+#fig1, ax1 = plt.subplots()
+#ax1.pie([30, 25, 40, 35],
+#        labels=names,
+#        autopct='%1.2f%%'
+#)
+#
+#ax1.axis('equal')
+#plt.show()
+
+
+
+# using explode(): to separate a part of a pie chart
+
+#import matplotlib.pyplot as plt
+#
+#names = ['aa', 'bb', 'cc', 'dd']
+#
+#fig1, ax1 = plt.subplots()
+#ax1.pie([30, 25, 40, 35],
+#        explode=(0.1, 0.1, 0, 0), # it would separate 'bb'
+#        labels=names,
+#        autopct='%1.1f%%'
+#)
+#
+#ax1.axis('equal')
+#plt.show()
