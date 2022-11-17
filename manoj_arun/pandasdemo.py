@@ -229,10 +229,48 @@ import pandas as pd
 data=pd.read_excel("pddemo.xlsx",sheet_name="sheetdata")
 print(data)
 
+-------------------------------------------------------- read excel data and show chart using pandas-----------------------
 
 
 
 
+import pandas as pd
+import sys
+import matplotlib.pyplot as plt
+test=True
+try:
+    
+    data=pd.read_excel("student.xlsx",sheet_name="mysheet")    
+    print(data)
+    print(type(data))
+    plt.xlim(0,5)
+    plt.ylim(0,150)
+    plt.title(" My Line Chart ")
+    plt.xlabel(" Range 0 to 3 ")
+    plt.ylabel(" Range 0 to 200")
+    plt.plot(data,"b^",label="My Scoring Level")
+    plt.plot(data,label="my result")
+    plt.grid(True)
+    plt.legend()
+    plt.savefig("mypic.jpg")
+    plt.show()    
+    '''
+    except FileNotFoundError:
+        print("file is missing")
+    except ValueError:
+        print("input is wrong")
+    except IndexError:
+        print("index error")
+    '''
+except:
+    test=False
+    print("Error Name: ",sys.exc_info()[0])
+    print("Error Name: ",sys.exc_info()[1])
+finally:
+    if test==False:
+        print("program end with error")
+    else:
+        print("program end with success")
 
 
 
