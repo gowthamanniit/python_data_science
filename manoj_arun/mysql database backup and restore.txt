@@ -1,0 +1,45 @@
+mysql backup and restore?
+
+step 1:
+	create database employee
+
+step 2:
+	use employee
+step 3:
+	create table edetail (eno int,ename varchar(33),esal float)
+	insert into edetail values(1001,'gowthaman',23454.50)
+	select * from edetail	
+	10 records insert.
+step 4: 
+	c:/program files/mysql/mysqlserver5.5/bin> 
+
+	prerequest:
+
+	check mysqldump.exe + mysql.exe(application file)
+	mysqldump----> backup purpose
+	mysql-----------> restore purpose
+
+
+step 5: backup (open command prompt)
+
+c:/program files/mysql/mysqlserver5.5/bin>mysqldump -u root -p database tablename > c:/notes/anyname.sql
+enter password: *****
+ex:
+C:\Program Files\MySQL\MySQL Server 5.5\bin>mysqldump -u root -p employee edetail > d:/notes/arun.sql
+
+backup completed.
+step 6:  open mysql --> delete database.
+
+command: drop database employee.
+step 7:
+	command prompt open and goto mysql bin folder;
+
+step 8: create only database(database name must same i.e previously drop name):
+	create database employee;	
+
+step 9: restore	
+C:\Program Files\MySQL\MySQL Server 5.5\bin>mysql -u root -p databasename < d:/notes/arun.sql
+ex:
+C:\Program Files\MySQL\MySQL Server 5.5\bin>mysql -u root -p employee < d:/notes/arun.sql
+
+step 10: goto mysql --> check table name.
