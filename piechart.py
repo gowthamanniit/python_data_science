@@ -1,15 +1,8 @@
-##Pie Chart
 import matplotlib.pyplot as plt
- 
-# Data to plot
-labels = 'Python', 'C++', 'Ruby', 'Java'
-sizes = [215, 130, 245, 210]
-colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue']
-explode = (0.1, 0, 0, 0)  # explode 1st slice
- 
-# Plot
-plt.pie(sizes, explode=None, labels=labels, colors=colors,
-        autopct='%1.1f%%', shadow=True, startangle=140)
- 
+label=["dmk","admk","bjp","others"]
+values=[50,25,15,10]
+mycolor=["red","green","blue","yellow"]
+exp=[0,0.1,0,0]
+plt.pie(values,explode=exp,labels=label,colors=mycolor,shadow=True,autopct="%1.1f%%",startangle=45)
 plt.axis('equal')
 plt.show()
