@@ -77,6 +77,7 @@ arr2=numpy.random.randint(0,50,10)
 #print(numpy.sqrt(arr2))
 
 print(numpy.max(arr2))
+sum,mean(Avg),median(middle)
 
 
 Numpy.py
