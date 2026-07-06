@@ -156,7 +156,7 @@ print(df_test)
 
 #Read a file using pandas
 
-test_df=pd.read_excel('OnlineExample.xlsx',sheetname="LIVEWIRE")
+test_df=pd.read_excel('OnlineExample.xlsx',sheet_name="LIVEWIRE")
 print(test_df.head())
 print(test_df)
 
